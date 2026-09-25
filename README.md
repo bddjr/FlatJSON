@@ -126,6 +126,67 @@ This block does not validate whether the input `rawjson` conforms to the JSON sp
 
 ---
 
+## clear
+
+Custom block: `FlatJSON.clear`
+
+Clears `FlatJSON.error`, then automatically calls the following custom blocks:
+- `FlatJSON.clear_temporary_variables`
+- `FlatJSON.clear_parse_input`
+- `FlatJSON.clear_parse_output`
+- `FlatJSON.clear_stringify_input`
+- `FlatJSON.clear_stringify_output`
+
+---
+
+## clear_temporary_variables
+
+Custom block: `FlatJSON.clear_temporary_variables`
+
+Clears all variables and lists starting with `FlatJSON/internal.temp.`.
+
+---
+
+## clear_parse_input
+
+Custom block: `FlatJSON.clear_parse_input`
+
+Clears the `FlatJSON.parse.input` variable.
+
+---
+
+## clear_parse_output
+
+Custom block: `FlatJSON.clear_parse_output`
+
+Clears all lists starting with `FlatJSON.parse.output.`.
+
+---
+
+## clear_stringify_input
+
+Custom block: `FlatJSON.clear_stringify_input`
+
+Clears all variables and lists starting with `FlatJSON.stringify.input.`.
+
+---
+
+## clear_stringify_input_lists
+
+Custom block: `FlatJSON.clear_stringify_input_lists`
+
+Clears all lists starting with `FlatJSON.stringify.input.`.
+
+---
+
+## clear_stringify_output
+
+Custom block: `FlatJSON.clear_stringify_output`
+
+Clears the `FlatJSON.stringify.output` variable.
+
+---
+
 ## License
 
 This project is released into the public domain under the [Unlicense](https://unlicense.org).

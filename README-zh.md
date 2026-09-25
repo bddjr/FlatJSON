@@ -126,6 +126,67 @@ value:
 
 ---
 
+## clear
+
+自制积木: `FlatJSON.clear`
+
+清空 `FlatJSON.error` ，然后自动调用以下自制积木：
+- `FlatJSON.clear_temporary_variables`
+- `FlatJSON.clear_parse_input`
+- `FlatJSON.clear_parse_output`
+- `FlatJSON.clear_stringify_input`
+- `FlatJSON.clear_stringify_output`
+
+---
+
+## clear_temporary_variables
+
+自制积木: `FlatJSON.clear_temporary_variables`
+
+清空 `FlatJSON/internal.temp.` 开头的所有变量和列表。
+
+---
+
+## clear_parse_input
+
+自制积木: `FlatJSON.clear_parse_input`
+
+清空 `FlatJSON.parse.input` 变量。
+
+---
+
+## clear_parse_output
+
+自制积木: `FlatJSON.clear_parse_output`
+
+清空 `FlatJSON.parse.output.` 开头的所有列表。
+
+---
+
+## clear_stringify_input
+
+自制积木: `FlatJSON.clear_stringify_input`
+
+清空 `FlatJSON.stringify.input.` 开头的所有变量和列表。
+
+---
+
+## clear_stringify_input_lists
+
+自制积木: `FlatJSON.clear_stringify_input_lists`
+
+清空 `FlatJSON.stringify.input.` 开头的所有列表。
+
+---
+
+## clear_stringify_output
+
+自制积木: `FlatJSON.clear_stringify_output`
+
+清空 `FlatJSON.stringify.output` 变量。
+
+---
+
 ## 许可证
 
 该作品使用 [Unlicense](https://unlicense.org) 发布到公共领域。
