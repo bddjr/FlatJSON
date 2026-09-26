@@ -126,6 +126,17 @@ value:
 
 ---
 
+## copy_parse_output_to_stringify_input
+
+自制积木: `FlatJSON.copy_parse_output_to_stringify_input`
+
+该积木会执行以下操作:
+- 复制 `FlatJSON.parse.output.key` 到 `FlatJSON.stringify.input.key`
+- 复制 `FlatJSON.parse.output.type` 到 `FlatJSON.stringify.input.type`
+- 复制 `FlatJSON.parse.output.value` 到 `FlatJSON.stringify.input.value`
+
+---
+
 ## clear
 
 自制积木: `FlatJSON.clear`

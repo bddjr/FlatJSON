@@ -126,6 +126,17 @@ This block does not validate whether the input `rawjson` conforms to the JSON sp
 
 ---
 
+## copy_parse_output_to_stringify_input
+
+Custom block: `FlatJSON.copy_parse_output_to_stringify_input`
+
+This block performs the following operations:
+- Copies `FlatJSON.parse.output.key` to `FlatJSON.stringify.input.key`
+- Copies `FlatJSON.parse.output.type` to `FlatJSON.stringify.input.type`
+- Copies `FlatJSON.parse.output.value` to `FlatJSON.stringify.input.value`
+
+---
+
 ## clear
 
 Custom block: `FlatJSON.clear`
