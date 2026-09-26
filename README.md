@@ -44,7 +44,12 @@ Do not execute multiple FlatJSON custom blocks in parallel within the same sprit
 If needed, please use clones.  
 
 The returned error is in item 1 of `FlatJSON.error`.  
+If this item exists, the returned data is invalid.  
 If this item does not exist, no error occurred.
+
+More lenient than the JSON specification syntax:  
+In input strings, the letter immediately following `\` can be uppercase (for example `\N`), because Scratch converts strings to lowercase before comparison.  
+Output strings will automatically convert uppercase letters immediately following `\` to lowercase (for example `\N` becomes `\n`), ensuring compliance with JSON syntax.  
 
 ---
 
