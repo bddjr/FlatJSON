@@ -120,6 +120,8 @@ Errors:
 - `stringify: Bad Unicode escape of key input at position �:�`
 - `stringify: Unexpected type '�' at position �`
 
+This block checks the `FlatJSON.stringify.input.key` list, and replaces each item in it with a normalized key.
+
 This block checks whether the input `number` is valid, and turns it into `null` if invalid.
 
 This block does not validate whether the input `rawjson` conforms to the JSON specification; you need to ensure the input JSON is valid yourself.

@@ -120,6 +120,8 @@ value:
 - `stringify: Bad Unicode escape of key input at position �:�`
 - `stringify: Unexpected type '�' at position �`
 
+该积木会检查 `FlatJSON.stringify.input.key` 列表，并且把里面的每一项都替换成规范化的键。
+
 该积木会检查输入的 `number` 是否有效，无效则变成 `null` 。
 
 该积木不会检查输入的 `rawjson` 是否符合 JSON 规范，你需要自己保证输入的 JSON 合规。
