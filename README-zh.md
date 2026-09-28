@@ -7,6 +7,9 @@
 使用 TurboWarp 编辑器打开:  
 https://turbowarp.org/editor?project_title=FlatJSON&project_url=bddjr.github.io/FlatJSON/FlatJSON.sb3
 
+下载 sb3 文件：  
+https://bddjr.github.io/FlatJSON/FlatJSON.sb3
+
 Scratch 项目链接:  
 https://scratch.mit.edu/projects/1384506526/
 

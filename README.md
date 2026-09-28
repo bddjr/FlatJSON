@@ -7,6 +7,9 @@ JSON Flattening Parser and Stringifier in Scratch.
 Open with TurboWarp editor:  
 https://turbowarp.org/editor?project_title=FlatJSON&project_url=bddjr.github.io/FlatJSON/FlatJSON.sb3
 
+Download sb3 file:  
+https://bddjr.github.io/FlatJSON/FlatJSON.sb3
+
 Scratch Project Link:  
 https://scratch.mit.edu/projects/1384506526/
 
