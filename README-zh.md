@@ -16,11 +16,9 @@ https://scratch.mit.edu/projects/1384506526/
 
 JSON 语法参考: https://www.json.org/json-zh.html
 
-比 JSON 规范语法更宽容的是：  
-- 输入的字符串里，`\` 后面紧跟的字母可以使用大写字母（例如 `\N`），因为 Scratch 判断字符串时会先转成小写再判断。  
-  输出的字符串会自动把 `\` 后面紧跟的大写字母转为小写（例如 `\N` 变成 `\n`），确保符合 JSON 语法（除了 `rawjson` 类型）。  
-- 输入的字符串里，`true`、`false`、`null` 关键字可以使用大写字母（`TRUE`、`FALSE`、`NULL`），因为 Scratch 判断字符串时会先转成小写再判断。  
-  输出的字符串会自动把它们转为小写，确保符合 JSON 语法（除了 `rawjson` 类型）。  
+Scratch 判断字符串时会先转成小写再判断，所以比 JSON 规范语法更宽容的是：  
+输入的字符串里，`\` 后面紧跟的字母可以使用大写字母（例如 `\N`），`true`、`false`、`null` 关键字可以使用大写字母（`TRUE`、`FALSE`、`NULL`）。  
+输出会自动把它们转为小写，确保符合 JSON 语法（除了 `rawjson` 类型）。  
 
 键 (key):
 - 空键表示根，非空键必须以 `/` 开头。

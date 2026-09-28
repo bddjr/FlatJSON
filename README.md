@@ -16,11 +16,9 @@ https://scratch.mit.edu/projects/1384506526/
 
 JSON syntax reference: https://www.json.org/json-en.html
 
-More lenient than the JSON specification syntax:  
-- In input strings, the letter immediately following `\` can be uppercase (for example `\N`), because Scratch converts strings to lowercase before comparison.  
-  Output strings will automatically convert uppercase letters immediately following `\` to lowercase (for example `\N` becomes `\n`), ensuring compliance with JSON syntax (except for the `rawjson` type).  
-- In input strings, the keywords `true`, `false`, and `null` can use uppercase letters (`TRUE`, `FALSE`, `NULL`), because Scratch converts strings to lowercase before comparison.  
-  Output strings will automatically convert them to lowercase, ensuring compliance with JSON syntax (except for the `rawjson` type).  
+Scratch converts strings to lowercase before comparison, so it is more lenient than the JSON specification syntax:  
+In input strings, the letter immediately following `\` can be uppercase (for example `\N`), and the `true`, `false`, and `null` keywords can use uppercase letters (`TRUE`, `FALSE`, `NULL`).  
+The output will automatically convert them to lowercase, ensuring compliance with JSON syntax (except for the `rawjson` type).  
 
 key:
 - An empty key represents the root; non-empty keys must start with `/`.
