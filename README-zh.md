@@ -41,15 +41,15 @@ Scratch 判断字符串时会先转成小写再判断，所以比 JSON 规范语
 - `\b` 会被解析成 `�` (U+FFFD) ，因为 [scratch-parser](https://github.com/scratchfoundation/scratch-parser) 会移除 Scratch 作品的 `project.json` 里的所有 `\b` 。  
   旧版 scratch-parser 甚至会把 `"\\b"` 变成 `"\"` ，导致作品加载失败。
 
+返回的错误在 `FlatJSON.error` 的第 1 项。  
+如果有这一项，则返回的数据无效。  
+如果没有这一项，则没有发生错误。
+
 以 `FlatJSON/internal.` 开头的变量、列表、自制积木是 FlatJSON 内部用的。  
 不要擅自调用或修改它们，除非你清楚自己在干什么。  
 
 不要在同一个角色里并行执行多个 FlatJSON 自制积木。  
 如果需要，请使用克隆体。  
-
-返回的错误在 `FlatJSON.error` 的第 1 项。  
-如果有这一项，则返回的数据无效。  
-如果没有这一项，则没有发生错误。
 
 ---
 

@@ -41,15 +41,15 @@ value:
 - `\b` will be parsed as `�` (U+FFFD), because [scratch-parser](https://github.com/scratchfoundation/scratch-parser) removes all `\b` in a Scratch project's `project.json`.  
   Older versions of scratch-parser would even turn `"\\b"` into `"\"`, causing project loading to fail.
 
+The returned error is in item 1 of `FlatJSON.error`.  
+If this item exists, the returned data is invalid.  
+If this item does not exist, no error occurred.
+
 Variables, lists, and custom blocks starting with `FlatJSON/internal.` are for internal use by FlatJSON.  
 Do not call or modify them unless you know what you are doing.  
 
 Do not execute multiple FlatJSON custom blocks in parallel within the same sprite.  
 If needed, please use clones.  
-
-The returned error is in item 1 of `FlatJSON.error`.  
-If this item exists, the returned data is invalid.  
-If this item does not exist, no error occurred.
 
 ---
 
