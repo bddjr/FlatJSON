@@ -17,17 +17,19 @@ https://scratch.mit.edu/projects/1384506526/
 JSON 语法参考: https://www.json.org/json-zh.html
 
 比 JSON 规范语法更宽容的是：  
-输入的字符串里，`\` 后面紧跟的字母可以使用大写字母（例如 `\N`），因为 Scratch 判断字符串时会先转成小写再判断。  
-输出的字符串会自动把 `\` 后面紧跟的大写字母转为小写（例如 `\N` 变成 `\n`），确保符合 JSON 语法。  
+- 输入的字符串里，`\` 后面紧跟的字母可以使用大写字母（例如 `\N`），因为 Scratch 判断字符串时会先转成小写再判断。  
+  输出的字符串会自动把 `\` 后面紧跟的大写字母转为小写（例如 `\N` 变成 `\n`），确保符合 JSON 语法（除了 `rawjson` 类型）。  
+- 输入的字符串里，`true`、`false`、`null` 关键字可以使用大写字母（`TRUE`、`FALSE`、`NULL`），因为 Scratch 判断字符串时会先转成小写再判断。  
+  输出的字符串会自动把它们转为小写，确保符合 JSON 语法（除了 `rawjson` 类型）。  
 
-key:
+键 (key):
 - 空键表示根，非空键必须以 `/` 开头。
 - 多层级的键用 `/` 分隔，例如 `/a/b/c` 。
 - `/` 会被转义为 `\/` ， `\` 会被转义为 `\\` 。
 - 如果有字符是控制字符 (U+0000 - U+001F) ，使用转义格式写法，例如 `\b\t\n\f\r\u001f` 。
 - 建议不使用大写字母，因为 Scratch 判断字符串时会先转成小写再判断。
 
-type:
+类型 (type):
 - `object`
 - `array`
 - `string`
@@ -36,7 +38,7 @@ type:
 - `null`
 - `rawjson` (仅字符串化)
 
-value:
+值 (value):
 - 当 type 是 `array` 时，value 被用于保存数组的长度。
 - `\b` 会被解析成 `�` (U+FFFD) ，因为 [scratch-parser](https://github.com/scratchfoundation/scratch-parser) 会移除 Scratch 作品的 `project.json` 里的所有 `\b` 。  
   旧版 scratch-parser 甚至会把 `"\\b"` 变成 `"\"` ，导致作品加载失败。
