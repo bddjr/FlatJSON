@@ -83,16 +83,16 @@ Scratch 判断字符串时会先转成小写再判断，所以比 JSON 规范语
 
 错误:
 - `parse: Unexpected end of JSON input`
-- `parse: Unexpected token '�' at position �`
-- `parse: Expected double-quoted property name in JSON at position �`
-- `parse: Bad control character in string literal in JSON at position �`
-- `parse: Bad escaped character in JSON at position �`
-- `parse: Bad Unicode escape in JSON at position �`
-- `parse: Expected ':' after property name in JSON at position �`
-- `parse: Expected ',' or '}' after property value in JSON at position �`
-- `parse: Expected ',' or ']' after array element in JSON at position �`
-- `parse: Unexpected number in JSON at position �`
-- `parse: Unexpected number '�' in JSON`
+- `parse: Unexpected token '<char>' at position <offset>`
+- `parse: Expected double-quoted property name in JSON at position <offset>`
+- `parse: Bad control character in string literal in JSON at position <offset>`
+- `parse: Bad escaped character in JSON at position <offset>`
+- `parse: Bad Unicode escape in JSON at position <offset>`
+- `parse: Expected ':' after property name in JSON at position <offset>`
+- `parse: Expected ',' or '}' after property value in JSON at position <offset>`
+- `parse: Expected ',' or ']' after array element in JSON at position <offset>`
+- `parse: Unexpected number in JSON at position <offset>`
+- `parse: Unexpected number '<number>' in JSON`
 
 ---
 
@@ -122,11 +122,11 @@ Scratch 判断字符串时会先转成小写再判断，所以比 JSON 规范语
 - `stringify: Expected input key, type, and value lists to have the same length`
 - `stringify: Expected non-empty input`
 - `stringify: Expected input key list to contain the root key`
-- `stringify: Expected non-empty key to start with '/' at position �`
-- `stringify: Unexpected end of key input at position �`
-- `stringify: Bad escaped character of key input at position �:�`
-- `stringify: Bad Unicode escape of key input at position �:�`
-- `stringify: Unexpected type '�' at position �`
+- `stringify: Expected non-empty key to start with '/' at position <index>`
+- `stringify: Unexpected end of key input at position <index>`
+- `stringify: Bad escaped character of key input at position <index>:<offset>`
+- `stringify: Bad Unicode escape of key input at position <index>:<offset>`
+- `stringify: Unexpected type '<type>' at position <index>`
 
 该积木会检查 `FlatJSON.stringify.input.key` 列表，并且把里面的每一项都替换成规范化的键。
 
